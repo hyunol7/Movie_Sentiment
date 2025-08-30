@@ -21,11 +21,11 @@
 - [기술 스택](#-기술-스택)
 - [라이선스](#-라이선스)
 
-## 🎯 프로젝트 개요
+## 프로젝트 개요
 
 이 프로젝트는 영화 리뷰 텍스트의 감성을 분석하고, 사용자의 선호도에 따라 개인화된 영화를 추천하는 시스템입니다. IMDB 리뷰 데이터를 활용하여 다양한 머신러닝과 딥러닝 모델을 비교하고, Netflix 메타데이터를 결합하여 종합적인 추천 서비스를 제공합니다.
 
-### 🌟 프로젝트 특징
+### 프로젝트 특징
 
 - **다중 모델 비교**: 7개의 서로 다른 ML/DL 모델 성능 비교
 - **실시간 감성 분석**: 사용자 입력 리뷰에 대한 즉시 감성 분석
@@ -33,7 +33,7 @@
 - **인터랙티브 웹 인터페이스**: Streamlit 기반 사용자 친화적 대시보드
 - **종합적 시각화**: 데이터 탐색 및 모델 성능 시각화
 
-## 🎪 주요 기능
+## 주요 기능
 
 ### 1. 감성 분석 (Sentiment Analysis)
 - **실시간 분석**: 사용자가 입력한 리뷰의 긍정/부정 감성 분류
@@ -57,7 +57,7 @@
 - **실시간 결과**: 즉시 확인 가능한 분석 및 추천 결과
 - **종합 리포트**: 프로젝트 전반에 대한 상세 정보
 
-## 📊 데이터셋
+## 데이터셋
 
 ### IMDB Movie Reviews Dataset
 - **크기**: 50,000개 영화 리뷰
@@ -73,7 +73,7 @@
   - 줄거리 설명, 등급
 - **용도**: 추천 시스템 구축 및 콘텐츠 기반 필터링
 
-## 🧠 모델 아키텍처
+## 모델 아키텍처
 
 ### 머신러닝 모델
 1. **Logistic Regression**: 선형 분류를 위한 기본 모델
@@ -111,7 +111,7 @@
 Top-N 추천 결과
 ```
 
-## 🛠️ 설치 및 실행
+## 설치 및 실행
 
 ### 1. 환경 설정
 
@@ -130,9 +130,8 @@ movie_env\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-### 2. 데이터 준비
+### 2. 데이터
 
-프로젝트 루트 디렉토리에 다음 파일들을 배치하세요:
 - `IMDB Dataset.csv`: IMDB 리뷰 데이터
 - `netflix_titles.csv`: Netflix 메타데이터
 
@@ -162,49 +161,8 @@ streamlit run src/streamlit_app/app.py
 
 브라우저에서 `http://localhost:8501`로 접속하여 대시보드를 사용할 수 있습니다.
 
-## 📁 프로젝트 구조
 
-```
-movie_proj/
-│
-├── 📁 data/                          # 데이터 저장소
-│   ├── imdb_preprocessed.csv         # 전처리된 IMDB 데이터
-│   ├── netflix_preprocessed.csv      # 전처리된 Netflix 데이터
-│   ├── models/                       # 학습된 모델들
-│   │   ├── best_model.pkl           # 최고 성능 모델
-│   │   ├── tfidf_vectorizer.pkl     # TF-IDF 벡터라이저
-│   │   └── ...                      # 기타 모델 파일들
-│   └── ...
-│
-├── 📁 src/                           # 소스 코드
-│   ├── 📁 preprocessing/             # 데이터 전처리
-│   │   └── data_preprocessor.py     # 데이터 전처리 메인
-│   │
-│   ├── 📁 models/                    # 모델 구현
-│   │   ├── ml_models.py             # 머신러닝 모델
-│   │   ├── dl_models.py             # 딥러닝 모델
-│   │   └── recommendation_system.py  # 추천 시스템
-│   │
-│   ├── 📁 utils/                     # 유틸리티
-│   │   └── visualization.py         # 시각화 도구
-│   │
-│   └── 📁 streamlit_app/             # 웹 애플리케이션
-│       └── app.py                   # Streamlit 메인 앱
-│
-├── 📁 static/                        # 정적 파일
-│   ├── *.png                        # 생성된 시각화 이미지
-│   └── *.html                       # 인터랙티브 차트
-│
-├── 📁 notebooks/                     # Jupyter 노트북 (선택사항)
-├── 📁 templates/                     # HTML 템플릿 (향후 확장용)
-│
-├── 📄 requirements.txt               # Python 패키지 의존성
-├── 📄 README.md                     # 프로젝트 설명서
-├── 📄 IMDB Dataset.csv              # IMDB 원본 데이터
-└── 📄 netflix_titles.csv            # Netflix 원본 데이터
-```
-
-## 📱 사용법
+## 사용법
 
 ### 1. 홈 페이지
 - 프로젝트 개요 및 주요 지표 확인
@@ -231,7 +189,7 @@ movie_proj/
 - 인터랙티브 차트를 통한 상세 분석
 - 최고 성능 모델 확인
 
-## 📈 결과 예시
+## 결과 예시
 
 ### 감성 분석 결과
 ```
@@ -249,7 +207,7 @@ movie_proj/
 ...
 ```
 
-## 🎯 성능 지표
+## 성능 지표
 
 ### 머신러닝 모델 성능 (예시)
 | 모델 | 정확도 | 정밀도 | 재현율 | F1-Score | ROC-AUC |
@@ -267,7 +225,7 @@ movie_proj/
 | LSTM | 0.895 | 0.234 |
 | CNN | 0.887 | 0.256 |
 
-## 🔧 기술 스택
+## 기술 스택
 
 ### 핵심 기술
 - **언어**: Python 3.8+
@@ -286,40 +244,15 @@ movie_proj/
 - **패키지 관리**: pip
 - **버전 관리**: Git
 
-## 🚀 향후 개선 계획
+## 향후 개선 계획
 
-### 단기 계획
-- [ ] BERT 모델 추가 구현
-- [ ] 사용자 피드백 시스템
-- [ ] API 엔드포인트 제공
+- BERT 모델 추가 구현
+- 사용자 피드백 시스템
+- API 엔드포인트 제공
+- 실시간 리뷰 크롤링
 
-### 장기 계획
-- [ ] 실시간 리뷰 크롤링
-- [ ] 다국어 지원
-- [ ] 개인화 학습 시스템
-- [ ] 모바일 앱 개발
 
-## 🤝 기여하기
 
-이 프로젝트에 기여를 원하신다면:
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
-## 📄 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
-
-## 📞 연락처
-
-프로젝트에 대한 질문이나 제안사항이 있으시면 언제든 연락해주세요!
-
----
-
-⭐ 이 프로젝트가 도움이 되셨다면 Star를 눌러주세요!
-
-**Made with ❤️ for Movie Lovers**
 
